@@ -17,4 +17,3 @@
       - String 형태로 저장되는 애플리케이션의 환경설정과 관련된 속성 저장
    2. ProducerRecord 객체 : `ProducerRecord<String, String> record = new ProducerRecord<>(topic, kafkaMessage);`
       - 키, 파티션을 지정하지 않은 경우 파타션은 라운드로빈(RR) 방식으로 할당
-
