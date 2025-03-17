@@ -10,10 +10,4 @@
 9. consumer1,2,3은 받은 내용을 consum1.log, consum2.log, consum3.log 형태로 분리해서 저장
 
 ### 구현
-- `producer는 .log 파일을 읽어와 topic에 로그 파일을 생성해서 전송 -> consumer는 topic에 있는 파일 데이터를 읽어와서 분리하여 파일 생성`
-
-1. `KafkaProducerApp.java`
-   1. Properties 객체 : `Properties prop = new Properties();`
-      - String 형태로 저장되는 애플리케이션의 환경설정과 관련된 속성 저장
-   2. ProducerRecord 객체 : `ProducerRecord<String, String> record = new ProducerRecord<>(topic, kafkaMessage);`
-      - 키, 파티션을 지정하지 않은 경우 파타션은 라운드로빈(RR) 방식으로 할당
+- `producer는 .log 파일을 읽어와 각 topic에 로그 파일을 생성해서 전송 -> consumer는 카프카에서 각 토픽을 구독하고 topic에 있는 파일 데이터를 읽어와서 파일 생성`
