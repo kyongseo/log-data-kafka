@@ -12,4 +12,4 @@
 ```
 
 ### 구현
-- 1. `producer는 .log 파일을 읽어와 각 topic에 로그 파일을 생성해서 전송 -> 2. consumer는 카프카에서 각 토픽을 구독하고 topic에 있는 파일 데이터를 읽어와서 파일 생성
+- producer는 log_maker 파일을 docker compose 한 후 각 topic에 생성된 로그 파일을 토픽에 전송 -> consumer는 카프카에서 각 토픽을 구독하고 topic에 있는 파일 데이터를 읽어와서 개별의 로그 파일 생성
